@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+           
+           //1.class-Movie
+           //a)
+            class Movie{
+            constructor(title,studio,rating){
+                this.title=title;
+                this.studio=studio;
+                this.rating=rating
+                if (rating==null) {
+                    return this.rating="PG"
+                } else {
+                  return this.rating=rating  
+                }
+            }
+            getPG(array){
+                var result=array.filter((element)=>element.rating=="PG")
+                return result
+            }
+        }
+        //d
+        var w1=new Movie("Casino Royale","Eon productions","PG13")
+        console.log(w1)
+
+        //b
+        var w2=new Movie("Casino Royale","Eon productions")
+        console.log(w2)
+
+       //c
+        var w3=new Movie("Maleficent","Walt Disney pictures")
+        var w4=new Movie("Interstellar","Christopher Nolan")
+        var w5=new Movie("The Expendables","Millennium Media","PG13")
+        var arr=[w1,w2,w3,w4,w5]
+        console.log(w1.getPG(arr))
+        
+        
+        </script>
+</body>
+</html>
